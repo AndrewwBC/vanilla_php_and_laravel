@@ -1,14 +1,21 @@
 {
-    "name": "tsi/php",
-    "autoload": {
-        "psr-4": {
-            "Tsi\\Php\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Andrew"
-        }
-    ],
-    "require": {}
+  "name": "tsi/php",
+  "require-dev": {
+    "psy/psysh": "^0.12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tsi\\Php\\": "src/"
+    }
+  },
+  "scripts": {
+    "dev": "php -S localhost:8084 -t src"
+  },
+  "authors": [
+    {
+      "name": "AndrewwBC",
+      "email": "andrew-hot2011@hotmail.com"
+    }
+  ],
+  "require": {}
 }

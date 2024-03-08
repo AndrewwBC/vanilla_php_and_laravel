@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace utils;
+namespace Tsi\Php\utils;
 
-use model\Patient;
+use Tsi\Php\model\Patient;
+
 class CorporalMassIndexCalculator {
 
     private $patient;

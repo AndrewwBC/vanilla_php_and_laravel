@@ -1,0 +1,14 @@
+{
+    "name": "tsi/php",
+    "autoload": {
+        "psr-4": {
+            "Tsi\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrew"
+        }
+    ],
+    "require": {}
+}

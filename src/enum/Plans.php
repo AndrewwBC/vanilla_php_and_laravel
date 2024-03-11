@@ -1,8 +1,10 @@
 <?php
 
-enum Plans {
+namespace Tsi\Php\enum;
+
+enum Plans: string {
 
     CASE NORMAL = "NORMAL";
-    case PREMIM = "PREMIUM";
+    case PREMIUM = "PREMIUM";
 
 }

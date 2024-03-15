@@ -1,8 +1,8 @@
 <?php
 
-namespace Daoo\Aula03\controller\api;
+namespace Tsi\Php\controller\api;
 
-use Daoo\Aula03\model\Desconto as ModelDesconto;
+use Tsi\Php\model\Desconto as ModelDesconto;
 use Exception;
 
 class Desconto extends Controller

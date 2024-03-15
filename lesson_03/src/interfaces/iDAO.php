@@ -1,6 +1,6 @@
 <?php
 
-namespace Daoo\Aula03\interfaces;
+namespace Tsi\Php\interfaces;
 
 interface iDAO
 {

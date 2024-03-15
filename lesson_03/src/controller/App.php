@@ -1,5 +1,5 @@
 <?php
-namespace Daoo\Aula03\controller;
+namespace Tsi\Php\controller;
 
 use Dotenv\Dotenv;
 use Exception;

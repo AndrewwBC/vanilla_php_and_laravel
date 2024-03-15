@@ -1,8 +1,8 @@
 <?php
 
-namespace Daoo\Aula03\database;
+namespace Tsi\Php\database;
 
-use Daoo\Aula03\controller\App;
+use Tsi\Php\controller\App;
 use Exception;
 use PDO;
 use stdClass;

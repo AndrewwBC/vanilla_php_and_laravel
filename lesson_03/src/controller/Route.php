@@ -1,8 +1,8 @@
 <?php 
-namespace Daoo\Aula03\controller;
+namespace Tsi\Php\controller;
 
-use Daoo\Aula03\controller\api\Controller as ApiController;
-// use Daoo\Aula03\controller\web\Controller as WebController;
+use Tsi\Php\controller\api\Controller as ApiController;
+// use Tsi\Php\controller\web\Controller as WebController;
 
 class Route
 {

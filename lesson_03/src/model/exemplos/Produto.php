@@ -1,9 +1,9 @@
 <?php
 
-namespace Daoo\Aula03\model;
+namespace Tsi\Php\model;
 
 use Exception;
-use Daoo\Aula03\interfaces\iDAO;
+use Tsi\Php\interfaces\iDAO;
 
 class Produto extends Model implements iDAO
 {

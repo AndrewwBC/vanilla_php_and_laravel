@@ -1,7 +1,7 @@
 <?php
 
-use Daoo\Aula03\controller\api\{Produto, Desconto};
-use Daoo\Aula03\controller\web\Produto as WebProduto;
+use Tsi\Php\controller\api\{Produto, Desconto};
+use Tsi\Php\controller\web\Produto as WebProduto;
 
 $routes = [
     'api' => [

@@ -1,8 +1,8 @@
 <?php
 
-namespace Daoo\Aula03\controller\api;
+namespace Tsi\Php\controller\api;
 
-use Daoo\Aula03\model\Produto as ModelProduto;
+use Tsi\Php\model\Produto as ModelProduto;
 use Exception;
 
 class Produto extends Controller

@@ -1,6 +1,6 @@
 <?php
 require '../vendor/autoload.php';
 
-use Daoo\Aula03\controller\App;
+use Tsi\Php\controller\App;
 
 App::init();

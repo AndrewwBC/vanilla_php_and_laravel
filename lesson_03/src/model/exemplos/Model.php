@@ -1,15 +1,14 @@
 <?php
 
-namespace Daoo\Aula03\model;
+namespace Tsi\Php\model;
 
-use Daoo\Aula03\database\Connection;
+use Tsi\Php\database\Connection;
 use Exception;
 use PDO;
 
 abstract class Model
 {
     protected $conn;    //connection
-
     protected $table;   //tableName
     protected $primary; //primary Key
     protected $columns; //columnNames

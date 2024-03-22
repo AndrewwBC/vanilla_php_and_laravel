@@ -6,7 +6,7 @@ use Tsi\Php\database\Connection;
 use Exception;
 use PDO;
 
-abstract class Model
+abstract class ModelExemplo
 {
     protected $conn;    //connection
     protected $table;   //tableName

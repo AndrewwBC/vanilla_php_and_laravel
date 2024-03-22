@@ -2,13 +2,10 @@
 
 namespace Tsi\Php\controller\api;
 
+use ErrorException;
 use Exception;
-use PhpParser\Error;
 use Tsi\Php\model\User as ModelUsers;
 use Tsi\Php\repository\UserRepository;
-use Tsi\Php\traits\userRepositoryTrait;
-
-
 
 class UserController extends Controller{
 	private ModelUsers $model;
@@ -35,10 +32,15 @@ class UserController extends Controller{
     }
 
 	public function store(){
-		$data = $_POST;
 
-		$userCreated = $this->userRepository->create($data);
+	 	foreach ($_POST as $chave => $valor) {
+			if (empty($valor)) {
+				echo json_encode(["error"=> "Preencha todos os campos"]);
+				return;
+			}
+    	}
 
-		return json_encode($userCreated);
+		$userCreated = $this->userRepository->create($_POST);
+		echo json_encode($userCreated);
 	}
 }

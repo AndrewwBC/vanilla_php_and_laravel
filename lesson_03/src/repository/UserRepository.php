@@ -33,10 +33,21 @@ class UserRepository implements iDAO {
      public function getColumns(): array {
         return [];
     }
-    public function create($data):bool{
+    public function create($data){
+        $username = $data["username"];
+        $email = $data["email"];
+        $password = $data["password"];
       
-        print_r($data);
-    
+        $createUser = $this->db->prepare("INSERT INTO users(username, email, password) VALUES(?,?,?) RETURNING *");
+
+        $createUser->bindParam(1, $username, PDO::PARAM_INT);
+        $createUser->bindParam(2, $email, PDO::PARAM_INT);
+        $createUser->bindParam(3, $password, PDO::PARAM_INT);
+
+        $createUser->execute();
+
+        return $createUser->fetch(PDO::FETCH_ASSOC);
+        
     }
     public function read(int $id = null):array{
         return [];

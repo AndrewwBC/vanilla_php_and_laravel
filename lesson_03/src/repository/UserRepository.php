@@ -27,6 +27,16 @@ class UserRepository implements iDAO {
         $user->execute();
 
         echo json_encode($user->fetchAll(PDO::FETCH_ASSOC));
+    }
+
+    public function updateById($field, $newValue, $userId){
+
+        $update = $this->db->prepare("UPDATE users SET $field = :newValue WHERE id = :userId RETURNING $field");
+        $update->bindParam(':newValue', $newValue, PDO::PARAM_STR);
+        $update->bindParam(':userId', $userId, PDO::PARAM_STR);
+        $update->execute();
+
+        echo json_encode($update->fetchAll(PDO::FETCH_ASSOC));
 
     }
 

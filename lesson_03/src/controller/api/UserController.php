@@ -43,4 +43,13 @@ class UserController extends Controller{
 		$userCreated = $this->userRepository->create($_POST);
 		echo json_encode($userCreated);
 	}
+
+	public function update($id){
+
+		$userId = $id;
+		$fieldToBeUpdated = $_POST["field"];
+		$newValue = $_POST["newValue"];
+
+		return $this->userRepository->updateById($fieldToBeUpdated, $newValue, $userId);
+	}
 }

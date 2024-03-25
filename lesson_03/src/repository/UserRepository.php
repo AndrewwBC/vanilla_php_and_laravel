@@ -29,7 +29,7 @@ class UserRepository implements iDAO {
         echo json_encode($user->fetchAll(PDO::FETCH_ASSOC));
     }
 
-    public function updateById($field, $newValue, $userId){
+    public function updateUserById($field, $newValue, $userId){
 
         $update = $this->db->prepare("UPDATE users SET $field = :newValue WHERE id = :userId RETURNING $field");
         $update->bindParam(':newValue', $newValue, PDO::PARAM_STR);
@@ -37,7 +37,15 @@ class UserRepository implements iDAO {
         $update->execute();
 
         echo json_encode($update->fetchAll(PDO::FETCH_ASSOC));
+    }
 
+    public function deleteUserById($id) {
+
+        $delete = $this->db->prepare("DELETE FROM users WHERE users.id = ? RETURNING *");
+        $delete->bindParam(1, $id, PDO::PARAM_INT);
+        $delete->execute();
+
+        echo json_encode($delete->fetchAll(PDO::FETCH_ASSOC));
     }
 
      public function getColumns(): array {
@@ -67,7 +75,6 @@ class UserRepository implements iDAO {
     }
     public function delete($id):bool{
        return true;
-
     }
     public function filter(array $filters):array{
         return [];

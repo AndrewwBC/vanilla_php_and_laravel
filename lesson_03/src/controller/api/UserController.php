@@ -49,7 +49,20 @@ class UserController extends Controller{
 		$userId = $id;
 		$fieldToBeUpdated = $_POST["field"];
 		$newValue = $_POST["newValue"];
+		
+		if($fieldToBeUpdated != 'username' || $fieldToBeUpdated != 'email') {
+			echo json_encode(['error'=> 'Insira uma coluna válida']);
+			return;
+		}
 
 		return $this->userRepository->updateById($fieldToBeUpdated, $newValue, $userId);
+	}
+
+	public function delete($id){
+		$userId = $id;
+
+		$deletedUser = $this->userRepository->deleteUserById($userId);
+
+		return json_encode($deletedUser);
 	}
 }
